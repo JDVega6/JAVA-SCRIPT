@@ -1,0 +1,37 @@
+:root {
+    --font-title: "Allison", serif;
+    --font-text: "Abel", cursive;
+    --font-subtitle: "Kaisei Tokumin", serif;
+    --primary-color: #ffd700;
+    --secund-color: #035f99;
+    --third-color: #e61010;
+    --color-letra: #eeeeee;
+  }
+  * {
+   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body{
+    background-color:rgb(247, 212, 205);
+}
+
+  .container{
+      width: 100%;
+  }
+
+  .container h1{
+      text-align: center;
+      color: #e61010;
+      font: 150% sans-serif;
+      font-family:"brush-bcript-mt" , cursive;
+}
+
+.container p{
+
+    text-align: center;
+    color: white;
+    font: 150% sans-serif;
+}
+  
