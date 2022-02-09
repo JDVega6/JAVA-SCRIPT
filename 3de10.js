@@ -44,7 +44,7 @@ if (numero <= 0)  return console.warn(`No se puede realizar el factorial de nume
 
 let factorial=1
 
-for (let i=numero; i>0 ; i++){
+for (let i=numero; i > 1; i--){
     factorial *= i;
 }
 
