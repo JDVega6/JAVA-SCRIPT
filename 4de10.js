@@ -61,16 +61,34 @@ devolverá 32°F */
 
  console.log ("14)")
 
- const Celsius = (numero = undefined) => {
+ const convertirGrados = (grados = undefined, unidad=undefined) => {
 
-   if(numero===undefined) return console.warn("No ingresaste ningun valor")
+   if(grados===undefined) return console.warn("No ingresaste los grados a convertir")
+   if(unidad===undefined) return console.warn("No ingresaste la unidad de temperatura")
 
-   if(typeof numero !=="number") return console.error (`El valor ${numero} ingresado, No es un numero`)
+   if(typeof grados !=="number" ) return console.error (`El valor ${numero} ingresado, No es un numero`)
+   if(typeof unidad !=="string" ) return console.error (`El valor ${unidad} ingresado, No es una cadena de texto`)
 
-   Fahrenheit = numero * 1.8 +32
+   if(unidad.length!==1 || !/(C|F)/.test(unidad)) return console.warn(`El valor de la unidad no es reconocida`)
 
-   return console.log (`C° ${numero} | F° ${Fahrenheit} `)
+ switch (unidad) {
+     case "F":
+            celsius = (grados-32) / 1.8
+            return console.log (`C° ${Math.round(celsius)} | F° ${grados} `)
+         break;
+
+         case "C":
+            Fahrenheit = grados * 1.8 +32
+            return console.log (`C° ${grados} | F° ${Math.round(Fahrenheit)} `)
+            break;
+
+     default:
+         break;
+    }
 
  }
 
- Celsius(18)
+ convertirGrados()
+ convertirGrados("2")
+ convertirGrados(2,true)
+ convertirGrados(0,"C")
