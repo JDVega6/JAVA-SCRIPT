@@ -23,7 +23,7 @@ if(base === 2){
 }
 }
 
-convertirSistemasNumericos(2,1)
+convertirSistemasNumericos(2,2)
 
 /* 16) Programa una función que devuelva el monto final después de aplicar un descuento
  a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.  */
@@ -75,7 +75,6 @@ convertirSistemasNumericos(2,1)
         mesesEnHumanos =Math.trunc(diasEnHumanos/30)    
         diasEnHumanos = diasEnHumanos - 30*mesesEnHumanos
 
-        
         
 
 

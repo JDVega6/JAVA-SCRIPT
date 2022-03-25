@@ -24,8 +24,8 @@ const recortarCadena = (cadena="",ncarac=undefined) =>(!cadena)
 
 recortarCadena("i love u",3)
 /*
-3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter,
- pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+3) Programa una función que dada una String te devuelva un Array de textos separados por cierto
+ caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
 */
 console.log(`3)`)
 
