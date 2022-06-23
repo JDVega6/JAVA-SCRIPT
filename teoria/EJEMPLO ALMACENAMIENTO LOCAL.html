@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Ejemplo de almacenamiento local</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+        <script>
+            $(document).ready(function(){
+
+                //BOTON GUARDAR
+                $('#boton-guardar').click(function(){
+                    var nom = document.getElementById("nombretxt").value;
+                    var apel = document.getElementById("apellidotxt").value;
+
+                    localStorage.setItem("Nombre",nom);
+                    localStorage.setItem("Apellido",apel);
+                    document.getElementById("nombretxt").value="";
+                    document.getElementById("apellidotxt").value="";
+                });
+            });
+
+                //BOTON CARGAR
+            $(document).ready(function(){
+                $('#boton-cargar').click(function(){
+                    var nombre = localStorage.getItem("Nombre");
+                    var apellido = localStorage.getItem("Apellido");
+
+                    document.getElementById("nombre").innerHTML=nombre;
+                    document.getElementById("apellido").innerHTML=apellido;
+
+                })
+            })
+        </script>
+    </head>
+
+    <h1>Ejemplo - almacenamiento local</h1>
+
+    <input type="text" placeholder="Ingrese su nombre" id="nombretxt">  
+    <br>
+    <br>
+    <input type="text" placeholder="Ingrese su apellido" id="apellidotxt">
+    <br>
+    <br>
+    <button id="boton-guardar">GUARDAR</button>
+    <br>
+    <hr/>
+    <br>
+    <label id="nombre"></label>
+    <br>
+    <br>
+    <label id="apellido"></label>
+    <br>
+    <br>
+    <button id="boton-cargar">CARGAR</button>
+    <br>
+    <hr>
+
+</html>

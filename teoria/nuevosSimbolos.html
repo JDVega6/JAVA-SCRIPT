@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevos tipos de datos</title>
+</head>
+<body>
+    <h1>Nuevos tipos de datos</h1>
+
+    <script>
+
+//Symbol()
+{
+        // let id =Symbol("id");
+        // let id2 =Symbol("id2");
+
+        // // console.log(id===id2)
+
+        // const NOMBRE = Symbol();
+        // const SALUDAR = Symbol();
+
+        // const persona = {
+        //     [NOMBRE]: "Juan",
+        //     edad:35
+        // };
+
+        // console.log(persona);
+        // persona.NOMBRE = "Juan Diego Vega "
+        // console.log(persona[NOMBRE])
+        // console.log(persona.NOMBRE)
+
+        // //Los simbolos tambien pueden ser una funcion 
+        // persona[SALUDAR]= function(){
+        //     console.log(`Hola`)
+        // }
+        // console.log(persona)
+
+        // //Para llamar a la funcion que fue nombrada como simbolo se hace de la siguiente manera
+        // persona[SALUDAR]();
+
+        // console.info(`**************`);
+
+        // for (propiedad in persona) {
+        //     console.log(propiedad)
+        //     // console.log(persona[propiedad])
+        // }
+
+
+        // //Para ver los objetos que tengo dentro de un objeto los reviso de la siguiente forma
+        // console.log(Object.getOwnPropertySymbols(persona));
+ 
+    }
+   
+//SETS
+{
+
+    // //Set se puede manejar como un arreglo y no deja repetir un elemento, no se hacen duplicados
+    // const set = new Set([1,2,3,3,4,6,true,false,3,{},{},5])
+
+    // console.log(set)
+    // console.log(set.size)
+
+    // const set2 = new Set();
+    // set2.add(1);
+    // set2.add(2);
+    // set2.add(3);
+    // set2.add(3);
+    // set2.add(4);
+    // set2.add(4);
+
+    // console.log(set2)
+
+
+    // // for (item  of set) {
+    // //     console.log(`for of de set: ${item}`)
+    // // }
+
+    // // set2.forEach(item=>console.log(`forEach: ${item}`))
+    
+
+    // /*EL SET ES UNA ARREGLO PERO NO ES UN ARREGLO, ES OTRO TIPO DE DATO*/
+    // let arr = Array.from(set)
+    // console.log(arr[1]);
+
+    // /*Se puede eliminar elementos del arreglo*/
+    // set.delete(2);
+    // console.log(set)
+
+    // set.clear()
+    // console.log(set)
+
+
+
+}
+   
+//MAPS
+{
+    // let mapa = new Map();
+    // mapa.set("nombre","juan");
+    // mapa.set("apellido","vega");
+    // mapa.set("edad",23);
+
+    // console.log(mapa);
+    // console.log(mapa.size);
+    // console.log(mapa.has("correo"));
+    // console.log(mapa.has("nombre"));
+    // console.log(mapa.get("apellido"));
+    // mapa.set("nombre","Diego")
+    // console.log(mapa);
+    // mapa.delete("apellido");
+    // console.log(mapa);
+    
+    // for(let [key,value] of mapa){
+    //     console.log(`Llave: ${key} => valor: ${value} `)
+    // }
+
+
+
+    // //La unica diferencia con un objeto es que se puede poner en la "key" un valor DIFERENTE A UN STRING
+    // mapa.set(false,true);
+    // console.log(mapa);
+
+    // const mapa2 = new Map([
+    //     ["nombre", "Juan"],
+    //     ["edad",24],
+    //     ["Sueños","Viajar"],
+    //     [null,null]
+    // ]);
+    // console.log(mapa2);
+
+    // const llavesMapa2 = [...mapa2.keys()];
+    // const valoresMapa2 = [...mapa2.values()];
+    // console.log(llavesMapa2);
+    // console.log(valoresMapa2);
+
+}
+   
+//WEAKSETS OR WEAKMAPS
+{
+    //Crean referencias debiles lo cual puede agilizar el proceso del programa, mejora el rendimiento de la aplicacion
+    //No son elementos iterables
+    //no se puede eliminar todo no se puede utilizar clear
+    //no se puede utilizar siza para ver el tamaño
+    //Para agregar elementos toca uno por uno con ".add"
+
+    // const ws =new WeakSet();
+
+    // let valor1 = {"valor1":1};
+    // let valor2 = {"valor2":2}
+    // let valor3 = {"valor3":3}
+    // ws.add(valor1);
+    // ws.add(valor2);
+    // console.log(ws);
+    // ws.delete(valor2)
+
+    // setInterval(()=>{
+    //     console.log(ws);
+    // },1000)
+
+    // setTimeout(()=>{
+    //     valor1 = null;
+    //     valor2 = null;
+    //     valor3 = null;
+    // },2000)
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++    */
+
+    // const wm = new WeakMap();
+    // let llave1 = {};
+    // let llave2 = {};
+    // let llave3 = {};
+
+    // wm.set(llave1,1);
+    // wm.set(llave2,2);
+    // wm.set(llave3,3);
+
+    // console.log(wm);
+    // //El .has solo compara y se obtiene un boolean 
+    // console.log(wm.has(llave1))
+    // wm.delete(llave2);
+    // console.log(wm);
+
+    // setInterval(()=>{
+    //     console.log(wm);
+    // },500)
+
+    // setTimeout(()=>{
+    //     llave1 = null;
+    //     llave2 = null;
+    //     llave3 = null;
+    // },2000)
+
+
+
+}
+
+//ITERABLES & ITERATORS
+{
+    // //Elementos que se pueden recorrer
+    // const iterable = "Hola";
+
+    // //Accedemos a el itredaro de nuestra variable iterable
+    // const iterador = iterable[Symbol.iterator]();
+
+    // console.log(iterable);
+    // console.log(iterador);
+
+    // // console.log(iterador.next());
+    // // console.log(iterador.next());
+    // // console.log(iterador.next());
+    // // console.log(iterador.next());
+    // // console.log(iterador.next());
+    // // console.log(iterador.next());   
+
+
+    // let next = iterador.next();
+
+    // while(!next.done){
+    //     console.log(next.value);
+    //     next = iterador.next();
+    // }
+
+}
+
+//GENERATORS
+{
+
+    // //Un generador es converitir el codigo de una funcion en iterable
+
+    // function* iterable(){
+    //     yield "Hola"
+    //     console.log("Hola despues del primer hola");
+    //     yield "Hola2"
+    //     console.log("Hola despues del segundo hola");
+    //     yield "Hola3"
+    //     yield "Hola4"
+    // }
+
+    // let iterador = iterable();
+
+
+    // for(let y of iterador){
+    //     console.log(y)
+    // }
+
+    // const arr = [...iterable()];
+    // console.log(arr)
+
+    // function cuadrado(valor){
+    //     setTimeout(()=>{
+    //        return console.log({
+    //             valor,
+    //             resultado: valor*valor
+    //         })
+    //     },Math.random() * 1000)
+       
+    // }
+
+    // function* generador(){
+    //     console.log("Inicia Generator");
+
+    //     yield cuadrado(0);
+    //     yield cuadrado(1);
+    //     yield cuadrado(2);
+    //     yield cuadrado(3);
+    //     yield cuadrado(4);
+    //     yield cuadrado(5);
+
+    //     console.log("Termina Generator");
+    // }
+
+    // let gen =generador();
+    // for (let y of gen){
+    //     console.log(y)
+    // }
+    // // console.log(iterador.next())
+    // // console.log(iterador.next())
+    
+
+    // // let next = iterador.next();
+
+    // // while(!next.done){
+    // //     console.log(next.value);
+    // //     next=iterador.next();
+
+    // // }
+
+
+}
+   
+//PROXIS
+{
+    // const persona = {
+    //     nombre:"",
+    //     apellido:"",
+    //     edad:0
+    // }
+
+    // const manejador = {
+    //     set(obj,prop,valor){
+    //         //LA siguiente linea permite modificar el proxy "juan"
+    //         if(Object.keys(obj).indexOf(prop) === -1){
+    //             return console.error (`La propiedad "${prop}" no existe en el objeto principal`)
+    //         }
+
+    //         if((prop ==="nombre" || prop === "apellido") && !(/^[A-Za-zÑñÁÉÍÓÚáéíóúü\s]+$/g.test(valor))){
+    //             return console.error (`La propiedad "${prop}" solo acepta letras y espacios en blanco`);
+    //         }
+    //         obj[prop]=valor
+
+    //     }
+    // }
+
+    // const juan = new Proxy(persona,manejador);
+
+    // juan.nombre = "Juan23";
+    // juan.apellido = "Vega";
+    // juan.edad = 23;
+    // juan.redes = "Linkedin"
+    // console.log(juan)
+
+}
+   
+//PROPIEDADES DINAMICAS DE LOS OBJETOS
+{
+    let aleatorio = Math.round(Math.random()*1000+5);
+    const objetoUsuario={
+        [`id_${aleatorio}`]:"Valor aleatorio "
+    };
+    const usuarios = ["jon","irma","santiago"];
+    console.log(objetoUsuario);
+    usuarios.forEach((usuario,index)=>objetoUsuario[`id_${index}`]= usuario);
+    console.log(objetoUsuario);
+}
+   </script>
+    
+</body>
+</html>
