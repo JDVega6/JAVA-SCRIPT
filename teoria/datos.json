@@ -1,0 +1,11 @@
+{
+    "Nombre":"Juan",
+    "Apellido":"Vega",
+    "Edad":23,
+    "hobbitsArreglo":["Trotar","Aprender","Ingles"],
+    "objetoRedes":{
+        "Facebook":"JuanVega",
+        "Intagram":"Juan0626"
+
+    }
+}

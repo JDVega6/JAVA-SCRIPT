@@ -325,15 +325,150 @@
    
 //PROPIEDADES DINAMICAS DE LOS OBJETOS
 {
-    let aleatorio = Math.round(Math.random()*1000+5);
-    const objetoUsuario={
-        [`id_${aleatorio}`]:"Valor aleatorio "
-    };
-    const usuarios = ["jon","irma","santiago"];
-    console.log(objetoUsuario);
-    usuarios.forEach((usuario,index)=>objetoUsuario[`id_${index}`]= usuario);
-    console.log(objetoUsuario);
+    // let aleatorio = Math.round(Math.random()*1000+5);
+    // const objetoUsuario={
+    //     [`id_${aleatorio}`]:"Valor aleatorio "
+    // };
+    // const usuarios = ["jon","irma","santiago"];
+    // console.log(objetoUsuario);
+    // usuarios.forEach((usuario,index)=>objetoUsuario[`id_${index}`]= usuario);
+    // console.log(objetoUsuario);
 }
+
+//THIS
+{
+    
+//     console.log(this);
+//     console.log(window);
+//     console.log(this === window);
+//     this.nombre = "Contexto Global";
+
+//     function imprimir (){
+//         console.log(this.nombre)
+//     }
+//     imprimir();
+
+//     obj = {
+//         nombre:"Contexto Objeto",
+//         imprimir: function(){
+//             console.log(this.nombre)
+//         }
+//     }
+
+//     obj.imprimir();
+// //*************************************************************
+//     obj2 = {
+//         nombre:"Contexto Objeto 2",
+//         imprimir
+//     }
+//     obj2.imprimir();
+
+//     //*]******+*******************************************************
+//     obj3 = {
+//         nombre:"Contexto Objeto 3",
+//         imprimir: ()=>{
+//             console.log(this.nombre)
+//         }
+//     }
+
+//     obj3.imprimir();
+
+//     //***********************************************
+//     function Persona(nombre){
+//         this.nombre = nombre;
+//         // return console.log(this.nombre)
+//         // return function(){
+//         //     console.log(this.nombre)
+//         // }
+//         return ()=>{
+//             console.log(this.nombre)
+//         }
+
+
+//     }
+//     let juan = new Persona("Juan")
+//     juan();
+
+
+}
+   
+//CALL,APPLY,BIND
+{
+    // console.log(this);
+    // this.lugar="Contexto Global";
+
+    // function saludar(saludo,nombre){
+    //     console.log(`${saludo} ${nombre} desde el  ${this.lugar}`)
+    // }
+
+    // saludar("Hola","Donna");
+    
+    // const obj = {
+    //     lugar:"Contexto Objeto"
+    // }
+
+    // //Puedo cambiar el contexto o el scope sin crear la funcion dentro del objeto como en la clase anterior
+    // saludar.call(obj,"Hola","Juan");//la diferencia es la forma en la que se ingresan los parametros
+    // saludar.apply(obj,["kiubo","Diego"]);
+    // //Si se pone null el contexto sera Global
+    // saludar.apply(null,["kiubo","Diego"]);
+
+
+    // const persona = {
+    //     nombre:"Juan",
+    //     saludar: function(){
+    //         console.log(`Hola ${this.nombre}`)
+    //     }
+    // }
+
+    // persona.saludar();
+
+    // const otraPersona = {
+    //     saludar:persona.saludar.bind(persona)
+    // }
+
+    // otraPersona.saludar();
+
+}
+
+//JSON
+{
+    // //JSON hace de traductor para todos los lenguajes 
+
+
+    // const json ={
+    // Nombre:"Juan",
+    // Apellido:"Vega",
+    // Edad:23,
+    // hobbitsArreglo:["Trotar","Aprender","Ingles"],
+    // objetoRedes:{
+    //     Facebook:"JuanVega",
+    //     Intagram:"Juan0626"
+
+    //     }
+    // }
+
+    // console.log(JSON);
+    // //El metodo ".parse" es el que realiza la traduccion para el lenguaje javaScript a excepcion de las cadenas de texto
+    // console.log(JSON.parse("{}"));
+    // console.log(JSON.parse("[]"));
+    // console.log(JSON.parse("3"));
+    // console.log(JSON.parse("true"));
+    // console.log(JSON.parse("null"));
+
+    // //Convierte todo en cadena de texto o a notacion JSON
+    // console.log(JSON.stringify({}));
+    // console.log(JSON.stringify([]));
+    // console.log(JSON.stringify(3));
+    // console.log(JSON.stringify(true));
+    // console.log(JSON.stringify(null));
+
+
+    // //Ejemplo
+    // console.log(JSON.stringify(json));
+    // console.log(JSON.parse(`{"Nombre":"Juan","Apellido":"Vega","Edad":23,"hobbitsArreglo":["Trotar","Aprender","Ingles"],"objetoRedes":{"Facebook":"JuanVega","Intagram":"Juan0626"}}`));
+}
+   
    </script>
     
 </body>
