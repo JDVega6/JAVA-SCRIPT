@@ -53,6 +53,22 @@
         .sepia{
             filter: sepia(1);
         }
+
+        .eventos-flujo div{
+            padding: 4rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .uno{
+            background-color: yellow;
+        }
+        .dos{
+            background-color: gold;
+        }
+        .tres{
+            background-color: lightyellow;
+        }
     </style>
 
 </head>
@@ -116,6 +132,43 @@
     </figure>
     
 </template>
+
+<h3>Eventos en javaScript</h3>
+<h4>Manejadores de Eventos</h4>
+<button onclick="holaMundo()">Evento con atributo HTML</button>
+<hr>
+<br><br>
+<button id="evento-semantico">Evento con manejador semantico</button>
+<hr>
+<br><br>
+<button id="evento-multiple">Evento con manejador multiple</button>
+<hr>
+<br><br>
+<button id="evento-remove">Removiendo eventos con manejadores multiples</button>
+<br><br><br><br><br>
+<h4>Flujo de eventos</h4>
+<section class="eventos-flujo">
+    <div class="uno">
+        1
+        <div class="dos">
+            2
+            <div class="tres">
+                3
+                <a href="https://aprendejavascript.org/" target="_blank" rel="nooper">enlace</a>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br><br><br><br><br><br><br><br><br>
+<h3>Manejo del Bom</h3>
+
+
+    <div class="1" id="Botones">
+        <button class="abrir" id="abrir-ventana">Abrir ventana</button>
+        <button class="cerrar" id="cerrar-ventana">Cerrar Ventana</button>
+        <button class="imprimir" id="imprimir-ventana">Imprimir ventana</button>
+    </div>
+   
 
 <script src="js/dom.js"></script>
 

@@ -257,3 +257,303 @@
     // document.body.appendChild($cloneCards);
 
 }
+
+//MODIFICANDO ELEMENTOS (COOL STYLE)
+{
+    
+    /* 
+.insertAdjacent...
+    .insertAdjacentElement(position,el)
+    .insertAdjacentHTML(position,html)
+    .insertAdjacentText(position,text)
+
+posiciones:
+    beforebegin (hermano anterior)
+    afterbegin (primer hijo)
+    beforeend (ultimo hijo)
+    afterend  (hermano siguiente)
+*/
+
+
+//     const $cards = document.querySelector(".cards"),
+//     $newCard = document.createElement("figure");
+
+//    let $contenCard= `
+//     <img src="https://placeimg.com/200/200/any" alt="Any">
+//     <figcaption></figcaption>
+//     `
+//     $newCard.classList.add("card");
+
+
+
+//     $newCard.insertAdjacentHTML("beforeend",$contenCard)
+//     $newCard.querySelector("figcaption").insertAdjacentText("afterbegin","Any")
+//     $cards.insertAdjacentElement("beforebegin",$newCard);
+//     // $cards.insertAdjacentElement("afterbegin",$newCard); 
+
+//     // $cards.prepend($newCard);
+//     // $cards.append($newCard);
+//     // $cards.before($newCard);
+//     // $cards.after($newCard);
+
+}   
+
+//DOM: MANEJADORES DE EVENTOS
+{
+    // function holaMundo (){
+    //     alert(`Hola mundo`)
+    // }
+
+    // const $eventoSemantico = document.getElementById("evento-semantico");
+
+    // //Se iguala a el nombre de la funcion pero sin los parentesis SOLO SE PUEDE PASAR UN PARAMETRO
+    // // $eventoSemantico.onclick = holaMundo
+    // $eventoSemantico.onclick = (e) => {
+    //     alert(`Evento con arrow function`)
+    //     console.log(e)
+    // }
+
+    // const $eventoMultiple = document.getElementById("evento-multiple");
+
+    // $eventoMultiple.addEventListener("click",holaMundo);
+    // $eventoMultiple.addEventListener("click",(e)=>{
+    //     alert(`Hola con evento multiple`)
+    //     console.log(e);
+    //     console.log(e.type);
+    //     console.log(e.target);
+    //     console.log(event);
+
+    // });
+
+}
+
+//DOM:EVENTOS CON PARAMETROS T REMOVER EVENTOS
+{
+    // function saludar(nombre = `Desconocid@`){
+    //     alert(`Hola ${nombre}`)
+    // }
+
+    // function holaMundo (){
+    //     alert(`Hola mundo`)
+    // }
+
+    // const $eventoMultiple = document.getElementById("evento-multiple");
+
+    // $eventoMultiple.addEventListener("click",holaMundo);
+    // $eventoMultiple.addEventListener("click",(e)=>{
+    //     alert(`Hola con evento multiple`)
+    //     console.log(e);
+    //     console.log(e.type);
+    //     console.log(e.target);
+    //     console.log(event);
+    // });
+
+    // //Para poder pasar parametros a los eventos no se puede solo con la funcion, toca encapsular la funcion del evento en 
+    // //una funcion anonima o en una arrow funtion
+    // $eventoMultiple.addEventListener("click",()=>saludar());
+    // $eventoMultiple.addEventListener("click",()=>{
+    //     saludar();
+    //     saludar("Juan Diego");
+
+    // });
+
+    // //REMOVER
+    // const $eventoRemover = document.getElementById("evento-remove");
+
+    // const removerDobleClick = (e)=>{
+    //     alert(`Removiendo el evento tipo ${e.type}`);
+    //     console.log(e);
+    //     $eventoRemover.removeEventListener("dblclick",removerDobleClick)
+    //     $eventoRemover.disabled = true;
+
+    // }
+
+    // $eventoRemover.addEventListener("dblclick",removerDobleClick);
+
+}
+
+//FLUJO DE LOS EVENTOS
+{
+    // const $disEventos = document.querySelectorAll(`.eventos-flujo div`);
+    // console.log($disEventos);
+
+    // function flujoEventos(e){
+    //     console.log(`Hola te saluda ${this.className}, el click lo origino ${e.target.className}`)
+    // }
+
+    // $disEventos.forEach(div =>{
+    //     //Fase de burbuja, del elemento mas interno a el elmento mas externo
+    //     // div.addEventListener("click",flujoEventos,false);
+    //     //Fase de captura, del elemento mas externo al elemento mas interno
+    //     // div.addEventListener("click",flujoEventos,true);
+
+    //     div.addEventListener("click",flujoEventos,{
+    //         capture: false,
+    //         once: true
+    //     })
+    // })
+}
+
+//DOM STOP PROPAGATION & PREVENT DEFAULT
+{
+    //  const $disEventos = document.querySelectorAll(`.eventos-flujo div`),
+    //  $linkEventos =  document.querySelector(".eventos-flujo a");
+    // console.log($disEventos);
+
+    // function flujoEventos(e){
+    //     console.log(`Hola te saluda ${this.className}, el click lo origino ${e.target.className}`)
+    //     //Evita la propagacion de los div
+    //     e.stopPropagation();
+    // }
+
+    // $disEventos.forEach(div =>{
+    //     //Fase de burbuja, del elemento mas interno a el elmento mas externo
+    //     div.addEventListener("click",flujoEventos,false);
+      
+    // });
+
+    // $linkEventos.addEventListener("click",(e)=>{
+    //     alert("Hola soy linkEventos");
+    //     //Realiza la opcion por defecto
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    // })
+}
+
+//DELEGACION DE EVENTOS
+{
+
+    // function flujoEventos(e){
+    //     console.log(`Hola te saluda ${this}, el click lo origino ${e.target.className}`)
+    //     //Evita la propagacion de los div
+        
+    // }
+
+    // document.addEventListener("click",(e)=>{
+    //     // console.log("click en", e.target);
+
+    //     if(e.target.matches(".eventos-flujo a")){
+    //         alert("Hola soy linkEventos");
+    //         e.preventDefault();
+    //     }
+    //     if(e.target.matches(".eventos-flujo div")){
+    //         flujoEventos(e)
+    //     }
+    // });
+
+}
+//77
+//BOM PROPIEDADES Y EVENTOS
+{
+    // window.addEventListener("resize",(e)=>{
+        
+    //     console.clear();
+    //     console.log("Evento resize");
+    //     console.log(window.innerWidth);
+    //     console.log(window.innerHeight);
+    //     console.log(window.outerHeight);
+    //     console.log(window.outerWidth);
+    //     console.log(e);
+    // })
+    
+    // window.addEventListener("scroll",(e)=>{
+    //     console.clear();
+    //     console.log("Evento scroll");
+    //     console.log(window.scrollY);
+    //     console.log(e);
+        
+    // })
+    
+    // window.addEventListener("load", e=>{
+    //     // console.clear();
+    //     console.log("Evento load");
+    //     console.log(window.screenX);
+    //     console.log(window.screenY);
+    //     console.log(e);
+        
+    // })
+    
+    // //Para llamar a el evento de recargar pagina es mucho mas rapido citando "document." NOTA: esto no recarga estilos
+    // //ni el documento html no espera nada de las interfacez visuales de la pagina
+    // document.addEventListener("DOMContentLoaded",e=>{
+    //     // console.clear();
+    //     console.log("Evento DOMContentLoaded");
+    //     console.log(window.screenX);
+    //     console.log(window.screenY);
+    //     console.log(e);
+        
+    // })
+   
+}
+
+//BOM METODOS
+{
+
+    //Se ayuda de este enlace para asignar eventos a los botones, aun no se sabe como hacer con el ID SIN UTILIZAR getid
+    // https://www.youtube.com/watch?v=_kUuH-TIEDQ
+    //Variable globales
+    const botones = document.querySelector('#Botones');
+    let ventana;
+
+    //Se asigna el evento
+    botones.addEventListener('click',delegacion);
+
+    //El metodo que va a realizar
+    function delegacion(e){
+        e.preventDefault(); 
+        const servicio = e.target.className
+
+        switch(servicio){
+            case "abrir":
+                ventana = open("http://johnny-five.io/")
+                break;
+            case "cerrar":
+                ventana.close();
+                break;
+
+            case "imprimir":
+                window.print();
+                break;
+            default:
+                break;
+        }
+    }
+
+}
+
+//BOM: OBJETOS URL, HISTORIAL Y NAVEGADOR
+{
+    // console.log("****************Obejeto URL (locatio)********")
+    // console.log(location);
+    // console.log(location.origin);
+    // console.log(location.protocol);
+    // console.log(location.host);
+    // console.log(location.hostname);
+    // console.log(location.port);
+    // console.log(location.href);
+    // console.log(location.hash);
+    // console.log(location.pathname);
+    // console.log(location.search);
+
+
+    // console.log("*****************Objeto Historial*************************************")
+    // console.log(history);
+    // console.log(history.length);
+    // console.log(history.back(/*numero de paginas que deseas regresar*/ ));
+    // console.log(history.forward(/*numero de paginas que deseas avanzar*/ ));
+    // console.log(history.go(/*numero de paginas a la que deseas ir*/ ));
+    
+    
+    console.log("*****************Objeto Navegador*************************************");
+    console.log(navigator);
+    console.log(navigator.connection);
+    console.log(navigator.geolocation);
+    console.log(navigator.mediaDevices);
+    console.log(navigator.mimeTypes);
+    console.log(navigator.onLine);
+    console.log(navigator.serviceWorker);
+    console.log(navigator.storage);
+    console.log(navigator.usb);
+    console.log(navigator.userAgent);
+
+}
