@@ -67,17 +67,15 @@ convertirSistemasNumericos(2,2)
         aniosEnHumanos = Math.floor(hoyMenosFecha/aniosEnMs)
         */
         
-        diasEnMs = 1000*60*60*24
-        diasEnHumanos = Math.floor(hoyMenosFecha/diasEnMs)
+        diasEnMs = 1000*60*60*24  //Tiempo en MiliSegundos => Dias
+        diasEnHumanos = Math.floor(hoyMenosFecha/diasEnMs)//.floor devuelve el numero redondeado mas baj0 = 4.95 => 4
         aniosEnHumanos = Math.trunc(diasEnHumanos/365)
 
         diasEnHumanos= diasEnHumanos - 365*aniosEnHumanos
-        mesesEnHumanos =Math.trunc(diasEnHumanos/30)    
+        mesesEnHumanos =Math.trunc(diasEnHumanos/30) // .trunc devuelve la parte entera de un numero
         diasEnHumanos = diasEnHumanos - 30*mesesEnHumanos
 
         
-
-
         return (Math.sign(aniosEnHumanos) === -1)
         ?console.info (`Faltan ${Math.abs(aniosEnHumanos)}años para el ${fecha.getFullYear()}.`)
         :(Math.sign(aniosEnHumanos)===1)
@@ -86,4 +84,4 @@ convertirSistemasNumericos(2,2)
 
 
 }
-  CuantoAñosHanPasado(new Date(1998,5,26))
+  CuantoAñosHanPasado(new Date(2020,5,26))

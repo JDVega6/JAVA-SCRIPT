@@ -47,7 +47,7 @@
     // $linkDom.removeAttribute("rel");
     // console.log($linkDom.hasAttribute("rel"));
 
-    // //Data-Attributes
+    //Data-Attributes
     // console.log($linkDom.getAttribute("data-description"));
     // console.log($linkDom.dataset);
     
@@ -78,7 +78,7 @@
     // let varDarkColor = getComputedStyle($html).getPropertyValue("--dark-color"),
     //  varYellowColor = getComputedStyle($html).getPropertyValue("--yellow-color");
 
-    //  console.log(varDarkColor,varYellowColor);
+    //  console.log(varDarkColor,varYellowColor);//Devuelve los codigos exadecimales del color que se le asigno en el html
 
     //  $body.style.backgroundColor = varDarkColor;
     //  $body.style.color = varYellowColor;
@@ -95,8 +95,8 @@
     
     // console.log($card.className);
     // console.log($card.classList);
-    // console.log($card.classList.contains("rotate-45"));
-    // $card.classList.add("rotate-45");
+    // console.log($card.classList.contains("rotate-45")); // Devuelve un boolean para saber si esa clase existe
+    // $card.classList.add("rotate-45");//Agrega la clase de CSS a card 
     // console.log($card.classList.contains("rotate-45"));
     // $card.classList.remove("rotate-45");
     // // $card.classList.toggle("rotate-135");//Si no existe la agrega y si existe la elimina
@@ -137,7 +137,7 @@
     // console.log($cards.lastElementChild);
     // console.log($cards.previousElementSibling);
     // console.log($cards.nextElementSibling);
-    // console.log($cards.closest("div"));
+    // console.log($cards.closest("div")); //Busca el ancestro o el padre mas cercano del elemento que le indiquemos
 }
 
 //CREANDO ELEMENTOS Y FRAGMENTOS DEL DOM
@@ -505,7 +505,7 @@ posiciones:
 
         switch(servicio){
             case "abrir":
-                ventana = open("http://johnny-five.io/")
+                ventana = open("http://johnny-five.io/");
                 break;
             case "cerrar":
                 ventana.close();
@@ -544,16 +544,16 @@ posiciones:
     // console.log(history.go(/*numero de paginas a la que deseas ir*/ ));
     
     
-    console.log("*****************Objeto Navegador*************************************");
-    console.log(navigator);
-    console.log(navigator.connection);
-    console.log(navigator.geolocation);
-    console.log(navigator.mediaDevices);
-    console.log(navigator.mimeTypes);
-    console.log(navigator.onLine);
-    console.log(navigator.serviceWorker);
-    console.log(navigator.storage);
-    console.log(navigator.usb);
-    console.log(navigator.userAgent);
+    // console.log("*****************Objeto Navegador*************************************");
+    // console.log(navigator);
+    // console.log(navigator.connection);
+    // console.log(navigator.geolocation);
+    // console.log(navigator.mediaDevices);
+    // console.log(navigator.mimeTypes);
+    // console.log(navigator.onLine);
+    // console.log(navigator.serviceWorker);
+    // console.log(navigator.storage);
+    // console.log(navigator.usb);
+    // console.log(navigator.userAgent);
 
 }
