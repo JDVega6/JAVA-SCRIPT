@@ -23,6 +23,8 @@ export function moveBall(e, ball, stage){
             if(limitsBall.top > limitsStage.top + 10){
                 e.preventDefault();// El preventDefault se usa para que no se interrumpa con otros eventos,se pone dentro
                 // del "if" para que NO desabilite el evento "scroll" que tiene la pagina por defecto, esto se hace para todos los casos
+                console.log(`ball: ${limitsBall.top}`)
+                console.log(`stage: ${limitsStage.top}`)
                 y--;
             }
         break;
@@ -35,6 +37,8 @@ export function moveBall(e, ball, stage){
         case 40://ArrowDown
             if(limitsBall.bottom  < limitsStage.bottom -10){
                 e.preventDefault();
+                console.log(`ball bottom: ${limitsBall.bottom}`)
+                console.log(`stage bottom: ${limitsStage.bottom}`)
                 y++;
             }
             break;
